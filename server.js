@@ -13,8 +13,8 @@ server.get("/", (req, res) => {
     res.json({
         "uid": `urn:uuid:odo-${uuidv4()}`,
         "updateDate": new Date().toISOString(), // we set this as latest for now
-        "titleText": `Github Issues on ${new Date().toDateString()}`,
-        "mainText": "Currently you have no issues",
+        "titleText": `Github Issues for odo at ${new Date().toDateString()}`,
+        "mainText": "Currently you have no issues in odo",
         "redirectionUrl": "https://github.com/openshift/odo/issues"
       })
 })
