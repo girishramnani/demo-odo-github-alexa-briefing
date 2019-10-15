@@ -24,14 +24,14 @@ server.get("/", (req, res) => {
         "uid": `urn:uuid:odo-${uuidv4()}`,
         "updateDate": new Date().toISOString(), // we set this as latest for now
         "titleText": `Github Issues for ${repo_name} on ${new Date().toDateString()}`,
-        "mainText": `There were ${response.data.issues.last_7days} issues opened in ${repo_name} since last 7 days`,
+        "mainText": `There were ${response.data.issues.last_7days} issues opened on ${repo_name} repo since last 7 days`,
         "redirectionUrl": `https://github.com/${repo_identifier}/issues`
       },
       {
         "uid": `urn:uuid:odo-${uuidv4()}`,
         "updateDate": new Date().toISOString(), // we set this as latest for now
         "titleText": `Github Notifications for ${repo_name} on ${new Date().toDateString()}`,
-        "mainText": `There were ${response.data.notifications.yesterday} notifications on ${repo_name} repo since yesterday`,
+        "mainText": `You have ${response.data.notifications.yesterday} notifications on ${repo_name} repo since yesterday`,
         "redirectionUrl": `https://github.com/notifications`
       }
     ])
